@@ -1,7 +1,7 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
-const ingredientRoutes = require('./routes/ingredients');
-const coktailRoutes =require('./routes/cocktails');
+const bodyParser = require('body-parser');
+const ingredientsRoutes = require('./routes/ingredients');
+const cocktailsRoutes = require('./routes/cocktails');
 
 
 const app = express();

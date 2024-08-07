@@ -1,0 +1,25 @@
+{
+  "name": "barinventoryapp",
+  "version": "1.0.0",
+  "description": "This app is so bar staff can more easily keep track of inventory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "handlebars": "^4.7.8",
+    "inquirer": "^10.1.8",
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3",
+    "validator": "^13.12.0"
+  }
+}
