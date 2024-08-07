@@ -2,47 +2,47 @@ const { Ingredient } = require("../models");
 
 const ingredientData = [
   {
-    ingredientId: "Jack Daniels",
+    name: "Jack Daniels",
     quantity: 100, // in units
   },
   {
-    ingredientId: "Coca-Cola",
+    name: "Coca-Cola",
     quantity: 200, // in units
   },
   {
-    ingredientId: "Tequila",
+    name: "Tequila",
     quantity: 100, // in units
   },
   {
-    ingredientId: "Triple Sec",
+    name: "Triple Sec",
     quantity: 50, // in units
   },
   {
-    ingredientId: "Lime Juice",
+    name: "Lime Juice",
     quantity: 100, // in ml
   },
   {
-    ingredientId: "Salt",
+    name: "Salt",
     quantity: 500, // in grams
   },
   {
-    ingredientId: "Mint Leaves",
+    name: "Mint Leaves",
     quantity: 200, // in grams
   },
   {
-    ingredientId: "White Rum",
+    name: "White Rum",
     quantity: 100, // in units
   },
   {
-    ingredientId: "Sugar Syrup",
+    name: "Sugar Syrup",
     quantity: 100, // in ml
   },
   {
-    ingredientId: "Gin",
+    name: "Gin",
     quantity: 100, // in units
   },
   {
-    ingredientId: "Tonic Water",
+    name: "Tonic Water",
     quantity: 200, // in units
   },
 ];

@@ -9,6 +9,7 @@ DrinkIngredient.init(
   {
     drinkId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: Drink,
         key: "id",
@@ -16,6 +17,7 @@ DrinkIngredient.init(
     },
     ingredientId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: Ingredient,
         key: "id",
@@ -29,10 +31,17 @@ DrinkIngredient.init(
   {
     sequelize,
     modelName: "DrinkIngredient",
+    tableName: "DrinkIngredients",
   }
 );
 
-Drink.belongsToMany(Ingredient, { through: DrinkIngredient });
-Ingredient.belongsToMany(Drink, { through: DrinkIngredient });
+Drink.belongsToMany(Ingredient, {
+  through: DrinkIngredient,
+  foreignKey: "drinkId",
+});
+Ingredient.belongsToMany(Drink, {
+  through: DrinkIngredient,
+  foreignKey: "ingredientId",
+});
 
 module.exports = DrinkIngredient;

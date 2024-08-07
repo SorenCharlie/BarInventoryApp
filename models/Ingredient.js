@@ -5,7 +5,7 @@ class Ingredient extends Model {}
 
 Ingredient.init(
   {
-    ingredientId: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

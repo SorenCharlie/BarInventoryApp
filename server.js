@@ -5,10 +5,11 @@ const sequelize = require("./config/database");
 const dotenv = require("dotenv");
 // const exphbs = require('express-handlebars');
 
-// Import route handlers
-const drinksRoutes = require("./routes/drinksRoutes"); // Adjust the path if needed
+// Routes
+const drinksRoutes = require("./routes/drinksRoutes");
 const ingredientsRoutes = require("./routes/ingredientsRoutes");
 const drinkIngredientsRoutes = require("./routes/drinkIngredientsRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 dotenv.config();
 
@@ -18,17 +19,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-// Use routes
 app.use("/drinks", drinksRoutes);
 app.use("/ingredients", ingredientsRoutes);
 app.use("/drinkIngredients", drinkIngredientsRoutes);
+app.use("/order", orderRoutes);
 
 // Handlebars engine setup (commented out for testing without Handlebars)
 // app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // app.set('view engine', 'handlebars');
 
 app.get("/", (req, res) => {
-  res.send("Hello, this is the homepage!"); // Sending a simple text response
+  res.send("Hello, this is the homepage!"); // Because i haven't figured out handlebars quite yet :P
 });
 
 sequelize
