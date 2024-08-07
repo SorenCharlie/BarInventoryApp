@@ -3,7 +3,7 @@ const session = require("express-session");
 const path = require("path");
 const sequelize = require("./config/database");
 const dotenv = require("dotenv");
-// const exphbs = require('express-handlebars');
+const exphbs = require("express-handlebars");
 
 // Routes
 const drinksRoutes = require("./routes/drinksRoutes");
@@ -15,6 +15,16 @@ dotenv.config();
 
 const app = express();
 
+// Cookies
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || "default_secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: process.env.SESSION_COOKIE_SECURE === "true" },
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -24,14 +34,12 @@ app.use("/ingredients", ingredientsRoutes);
 app.use("/drinkIngredients", drinkIngredientsRoutes);
 app.use("/order", orderRoutes);
 
-// Handlebars engine setup (commented out for testing without Handlebars)
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-  res.send("Hello, this is the homepage!"); // Because i haven't figured out handlebars quite yet :P
+  res.render("home");
 });
-
 sequelize
   .sync()
   .then(() => {

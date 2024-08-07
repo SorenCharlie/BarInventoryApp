@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bar Inventory</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar Inventory System</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  {{> header}}
+  <header>
+    <h1>Welcome to the Bar Inventory System</h1>
+    <nav>
+      <ul>
+        <li><a href="/drinks">Drinks</a></li>
+        <li><a href="/ingredients">Ingredients</a></li>
+        <li><a href="/order">Order</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    {{{body}}}
+    {{{body}}} 
   </main>
-  {{> footer}}
+  <footer>
+    <p>&copy; 2024 Bar Inventory System</p>
+  </footer>
 </body>
 </html>
