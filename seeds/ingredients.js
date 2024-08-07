@@ -1,4 +1,4 @@
-const { Ingredient } = require('../models');
+const { Ingredient } = require("../models");
 
 const ingredientData = [
   {
