@@ -62,18 +62,28 @@ const drinkIngredientData = [
     quantity: 1,
   },
   {
-    drink_id: 5, // Rum and Coke
+    drinkId: 5, // Rum and Coke
     ingredientId: 8, // Rum
     quantity: 1,
   },
   {
-    drink_id: 5, // Rum and Coke
+    drinkId: 5, // Rum and Coke
     ingredientId: 2, // Coca-Cola
     quantity: 1,
   },
 ];
 
-const seedDrinkIngredients = () =>
-  DrinkIngredient.bulkCreate(drinkIngredientData);
+const seedDrinkIngredients = async () => {
+  try {
+    await Promise.all(
+      drinkIngredientData.map(async (data) => {
+        await DrinkIngredient.findOrCreate({ where: data });
+      })
+    );
+    console.log("Drink Ingredients seeded successfully");
+  } catch (error) {
+    console.error("Error seeding Drink Ingredients:", error);
+  }
+};
 
 module.exports = seedDrinkIngredients;

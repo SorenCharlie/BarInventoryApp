@@ -1,28 +1,31 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/database");
 
 class Drink extends Model {}
 
-Drink.init({
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+Drink.init(
+  {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    brand: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
   },
-  type: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  brand: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  price: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-}, {
-  sequelize,
-  modelName: 'Drink',
-});
+  {
+    sequelize,
+    modelName: "Drink",
+  }
+);
 
 module.exports = Drink;

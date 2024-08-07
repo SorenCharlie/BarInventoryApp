@@ -1,20 +1,23 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/database");
 
 class Ingredient extends Model {}
 
-Ingredient.init({
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+Ingredient.init(
+  {
+    ingredientId: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
-  quantity: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-}, {
-  sequelize,
-  modelName: 'Ingredient',
-});
+  {
+    sequelize,
+    modelName: "Ingredient",
+  }
+);
 
 module.exports = Ingredient;
