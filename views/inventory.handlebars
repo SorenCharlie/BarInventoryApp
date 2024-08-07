@@ -1,0 +1,10 @@
+{{> header }}
+<div class="container">
+  <h2>Inventory</h2>
+  <ul>
+    {{#each inventory}}
+      <li>{{this.ingredient_name}}: {{this.quantity}} oz</li>
+    {{/each}}
+  </ul>
+</div>
+{{> footer }}
