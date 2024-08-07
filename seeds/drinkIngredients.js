@@ -68,7 +68,7 @@ const drinkIngredientData = [
   },
   {
     drink_id: 5, // Rum and Coke
-    ingredientId: 2, // Coka-Cola
+    ingredientId: 2, // Coca-Cola
     quantity: 1,
   },
 ];
