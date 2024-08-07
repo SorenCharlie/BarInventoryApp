@@ -31,7 +31,6 @@ const drinkData = [
     brand: "N/A",
     price: 7.50,
   },
-  // Add more drinks as needed
 ];
 
 const seedDrinks = () => Drink.bulkCreate(drinkData);

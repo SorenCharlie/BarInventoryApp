@@ -45,7 +45,6 @@ const ingredientData = [
     name: "Tonic Water",
     quantity: 200, // in units
   },
-  // Add more ingredients as needed
 ];
 
 const seedIngredients = () => Ingredient.bulkCreate(ingredientData);
