@@ -37,6 +37,13 @@ app.use("/order", orderRoutes);
 app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+const hbs = exphbs.create({
+  extname: ".handlebars",
+  defaultLayout: "main",
+  layoutsDir: path.join(__dirname, "views/layouts"),
+  partialsDir: path.join(__dirname, "views/partials"),
+});
+
 app.get("/", (req, res) => {
   res.render("home");
 });
