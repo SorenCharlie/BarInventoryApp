@@ -1,3 +1,2 @@
-\d users
-
-SELECT * FROM users;
+\d
+SELECT * FROM "Users";

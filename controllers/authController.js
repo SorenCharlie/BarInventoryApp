@@ -16,7 +16,7 @@ const registerUser = async (req, res) => {
     // Create the new user with hashed password
     await User.create({
       username,
-      password, // This will be hashed in the `beforeCreate` hook
+      password,
     });
 
     // Redirect to login page
