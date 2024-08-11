@@ -1,0 +1,2 @@
+\d
+SELECT * FROM "Users";
