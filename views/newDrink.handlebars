@@ -1,0 +1,34 @@
+<!-- In your Handlebars template, e.g., newDrink.handlebars -->
+<form id="newDrinkForm">
+  <div>
+    <label for="drinkName">Drink Name:</label>
+    <input type="text" id="drinkName" name="name" required>
+  </div>
+  <div>
+    <label for="drinkType">Drink Type:</label>
+    <input type="text" id="drinkType" name="type" required>
+  </div>
+  <div>
+    <label for="drinkBrand">Drink Brand:</label>
+    <input type="text" id="drinkBrand" name="brand" required>
+  </div>
+  <div>
+    <label for="drinkPrice">Drink Price:</label>
+    <input type="number" step="0.01" id="drinkPrice" name="price" required>
+  </div>
+  <div>
+    <label for="ingredient">Ingredient:</label>
+    <select id="ingredient" name="ingredientId" required>
+      {{#each ingredients}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div>
+    <label for="quantityUsed">Quantity Used:</label>
+    <input type="number" id="quantityUsed" name="quantityUsed" required>
+  </div>
+  <button type="submit">Add Drink</button>
+</form>
+
+<canvas id="drinkOrdersChart" width="400" height="400"></canvas>
