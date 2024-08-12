@@ -1,16 +1,22 @@
+<!-- order.handlebars -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Drink</title>
+  <title>Order Drinks</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/path/to/chart.min.js"></script>
+  <script src="js/chart.js" defer></script> 
+  <script src="js/order.js" defer></script>
+
 </head>
 <body>
-  <h1>Order a Drink</h1>
-  <form action="/order" method="POST">
-    <label for="drinkId">Drink ID:</label>
-    <input type="number" id="drinkId" name="drinkId" required>
-    <button type="submit">Order</button>
+  <h1>What drinks were ordered?</h1>
+  <form id="orderForm">
+    <div id="drinkOrders">
+    </div>
+    <button type="submit">Complete Order</button>
   </form>
 </body>
 </html>
