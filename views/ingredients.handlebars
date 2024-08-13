@@ -1,15 +1,23 @@
-   <!DOCTYPE html>
-   <html>
-   <head>
-     <title>Ingredients</title>
-   </head>
-   <body>
-     <h1>Ingredients</h1>
-     <ul>
-       {{#each ingredients}}
-       <li>{{this.name}} - Quantity: {{this.quantity}} units</li>
-       {{/each}}
-     </ul>
-   </body>
-   </html>
-   
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ingredients</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-4">Ingredients</h1>
+    <ul class="list-group">
+      {{#each ingredients}}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{this.name}}
+        <span class="badge badge-primary badge-pill">{{this.quantity}} units</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

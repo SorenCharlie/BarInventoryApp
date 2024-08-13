@@ -5,8 +5,6 @@ const sequelize = require("./config/database");
 const dotenv = require("dotenv");
 const exphbs = require("express-handlebars");
 
-const ingredientData = require("./seeds/ingredients");
-
 // Routes
 const drinksRoutes = require("./routes/drinksRoutes");
 const ingredientsRoutes = require("./routes/ingredientsRoutes");
