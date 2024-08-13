@@ -11,6 +11,8 @@ const ingredientsRoutes = require("./routes/ingredientsRoutes");
 const drinkIngredientsRoutes = require("./routes/drinkIngredientsRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const authRoutes = require("./routes/authRoutes");
+const chartsRoutes = require("./routes/chartsRoutes");
+const replenishRoutes = require("./routes/replenishRoutes");
 
 dotenv.config();
 
@@ -50,6 +52,8 @@ app.use("/ingredients", ingredientsRoutes);
 app.use("/drinkIngredients", drinkIngredientsRoutes);
 app.use("/order", orderRoutes);
 app.use("/", authRoutes);
+app.use("/charts", chartsRoutes);
+app.use("/replenish", replenishRoutes);
 
 // Middleware to set locals
 app.use((req, res, next) => {
