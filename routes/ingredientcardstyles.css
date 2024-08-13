@@ -1,0 +1,10 @@
+.card-group-wrap { 
+    flex-wrap: wrap;
+
+}
+
+@media (min-width: 768px) {
+    .card-group-wrap {
+        flex-wrap: nowrap;
+    }
+}
