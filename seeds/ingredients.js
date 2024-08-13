@@ -49,4 +49,7 @@ const ingredientData = [
 
 const seedIngredients = () => Ingredient.bulkCreate(ingredientData);
 
-module.exports = seedIngredients;
+module.exports = {
+  seedIngredients,
+  ingredientData,
+};
