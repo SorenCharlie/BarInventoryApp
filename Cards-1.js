@@ -10,6 +10,8 @@ document.getElementById('replenishButton').addEventListener('click',function(eve
     alert('Replenished Successfully' + replenishQuantity);
 
 
+    
+
 
 
 
