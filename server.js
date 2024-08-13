@@ -35,7 +35,12 @@ const hbs = exphbs.create({
   defaultLayout: "main",
   layoutsDir: path.join(__dirname, "views/layouts"),
   partialsDir: path.join(__dirname, "views/partials"),
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  },
 });
+
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
