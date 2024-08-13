@@ -7,3 +7,4 @@ CREATE DATABASE barinventory_db;
 -- Connect to the database
 \c barinventory_db;
 
+\i db/schema.sql
