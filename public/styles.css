@@ -26,7 +26,13 @@ section.text-center p {
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Added shadow for better visual impact */
-    margin-bottom: 20px; /* Added margin to separate the image from the button */
+    margin-bottom: 20px; /* Added margin to separate the image from the buttons */
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Add space between the buttons */
 }
 
 .btn-primary {
@@ -37,6 +43,18 @@ section.text-center p {
 }
 
 .btn-primary:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #007bff; /* Match the color of the primary button */
+    border-color: #007bff; /* Match the border color of the primary button */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.btn-secondary:hover {
     background-color: #0056b3; /* Darker button color on hover */
     border-color: #0056b3;
 }

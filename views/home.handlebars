@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles.css"> <!-- Link to custom styles -->
 </head>
 <body>
-    
+    {{> header }} <!-- Including header partial -->
 
     <div class="container">
         <!-- Header Section -->
@@ -23,18 +23,21 @@
         </section>
 
         <!-- Added Image Section Below the Introduction -->
-        <!-- This image enhances the visual appeal of the homepage -->
         <section class="text-center mb-4">
             <img src="https://f.hubspotusercontent10.net/hubfs/659515/counting-inventory-behind-bar.jpg" alt="Counting Inventory" class="img-fluid" />
         </section>
 
-        <!-- Call to Action Section -->
+        <!-- Call to Action Section with Separate Buttons -->
         <section class="text-center">
-            <a href="/register" class="btn btn-primary">Register or Login Now</a> <!-- Button to redirect to registration/login page -->
+            <div class="btn-group"> <!-- Grouping buttons together -->
+                <a href="/register" class="btn btn-primary">Register</a> <!-- Button to redirect to registration page -->
+                <a href="/login" class="btn btn-secondary">Login</a> <!-- Button to redirect to login page -->
+            </div>
         </section>
     </div>
 
-    
+    {{> footer }} <!-- Including footer partial -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> <!-- Popper.js for Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JavaScript -->
