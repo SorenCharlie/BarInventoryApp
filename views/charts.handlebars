@@ -7,41 +7,49 @@
 </head>
 <body>
 
-<h1>hello</h1>
+<h1>Popular Drinks</h1>
 
-    <div style="width: 50%; margin: auto;">
-        <canvas id="myChart"></canvas>
-    </div>
-    
-    <script>
-        // Assuming `test` is passed as a variable to the Handlebars template
-        const testValue = {{test}};
+<div style="width: 50%; margin: auto;">
+    <canvas id="myChart"></canvas>
+</div>
 
-        // Wait until the document is fully loaded
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Test Label'], // You can customize this label
-                    datasets: [{
-                        label: 'Test Data',
-                        data: [testValue],
-                        backgroundColor: 'rgba(0, 255, 0, 0.2)', // Green color with some transparency
-                        borderColor: 'rgba(0, 255, 0, 1)', // Solid green border
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jack and Coke', 'Margarita', 'Mojito', 'Gin and Tonic', 'Rum and Coke'],
+                datasets: [{
+                    label: 'Number of Drinks',
+                    data: [16, 8, 6, 4, 7],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)', 
+                        'rgba(54, 162, 235, 0.2)', 
+                        'rgba(255, 206, 86, 0.2)', 
+                        'rgba(75, 192, 192, 0.2)', 
+                        'rgba(153, 102, 255, 0.2)' 
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
+            }
         });
-    </script>
+    });
+</script>
 </body>
 
 </html>
